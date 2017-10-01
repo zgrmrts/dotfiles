@@ -9,12 +9,16 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'ervandew/supertab'
+" Plugin 'Valloric/YouCompleteMe'
 call vundle#end()
 filetype plugin indent on     " required by vundle
 
 " Enable the status bar (airline)
 set laststatus=2
-" set t_Co=256
+if $COLORTERM == 'gnome-terminal'
+    set t_Co=256
+endif
 
 
 " NERDTree
@@ -26,7 +30,6 @@ set switchbuf=usetab
 nnoremap <F8> :bnext<CR>
 nnoremap <S-F8> :bprevious<CR>
 
-
 " Options
 set history=50          " keep 50 lines of command line history
 set ruler               " show the cursor position all the time
@@ -34,12 +37,14 @@ set showcmd             " display incomplete commands
 
 " Searching
 set incsearch           " do incremental searching
-set ic                  " Search not case sensitive - ozgur
+set ic                  " Search not case sensitive
 set smartcase           " case sensitive only when input has capital letters
 " cursor altindaki kelimeyi arama
 nnoremap <F5> :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
 " clear search highlight
-nnoremap <F4> :noh<CR>
+nnoremap <silent> <F4> :noh<CR>
+" map <F7> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
+map <F6> :execute " grep -srnw --binary-files=without-match --exclude-dir=.git . -e " . expand("<cword>") . " " <bar> cwindow<CR>
 
 " Line numbering
 set number              " Show line numbers
@@ -91,6 +96,10 @@ set undodir=~/.vim/undo//
 let g:ctrlp_open_new_file = 'r'
 " ctrlp first file to current, others hidden, switch to first
 let g:ctrlp_open_multiple_files = 'ijr'
+" file count limit
+let g:ctrlp_max_files = 50000
+" mixed mode: files, buffers, recently used files.
+let g:ctrlp_cmd = 'CtrlPMixed'
 " ctrlp highlight color of selected file
 hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 
@@ -101,6 +110,7 @@ let g:vim_markdown_folding_disabled=1
 " force vim .md extension as markdown document
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
+" gitgutter
 set signcolumn=yes
 let g:gitgutter_realtime=1
 let g:gitgutter_eager=1
