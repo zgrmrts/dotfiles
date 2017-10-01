@@ -3,7 +3,8 @@ filetype off                  " required by vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
@@ -13,7 +14,7 @@ filetype plugin indent on     " required by vundle
 
 " Enable the status bar (airline)
 set laststatus=2
-set t_Co=256
+" set t_Co=256
 
 
 " NERDTree
@@ -100,7 +101,7 @@ let g:vim_markdown_folding_disabled=1
 " force vim .md extension as markdown document
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
-let g:gitgutter_sign_column_always=1
+set signcolumn=yes
 let g:gitgutter_realtime=1
 let g:gitgutter_eager=1
 
