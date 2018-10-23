@@ -3,6 +3,11 @@ export DOTFILES_RELATIVE="git/dotfiles"
 # full path
 export DOTFILES=${HOME}/${DOTFILES_RELATIVE}
 
+# git configuration
+git config --global user.name "Ozgur Murat" &&
+git config --global user.email zgrmrts@gmail.com &&
+git config --global core.editor vi &&
+
 # vim configuration
 mkdir -p ~/.vim/backup &&
 mkdir -p ~/.vim/swap &&
