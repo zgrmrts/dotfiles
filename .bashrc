@@ -26,3 +26,7 @@ notes() {
   fi
 }
 
+if [[ -n $SHELL_PROFILE ]]; then
+    HISTFILE=~/.bash_history."$SHELL_PROFILE"
+fi
+

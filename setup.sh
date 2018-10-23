@@ -24,4 +24,7 @@ echo "source \${DOTFILES}/.profile" >> ~/.profile &&
 mkdir -p ${HOME}/bin &&
 mkdir -p ${HOME}/recycle &&
 
+# terminator configuration file
+ln -s ${DOTFILES}/.config/terminator/config ${HOME}/.config/terminator/config &&
+
 echo installation complete

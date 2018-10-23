@@ -1,0 +1,85 @@
+[global_config]
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+  [[four]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 3263e59f-9c2c-4fc4-9b63-92ceb183b85a
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = ""
+      position = 67:27
+      size = 1981, 1225
+      title = /bin/bash
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 610
+      ratio = 0.5
+      type = VPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 988
+      ratio = 0.5
+      type = HPaned
+    [[[child5]]]
+      order = 1
+      parent = child1
+      position = 988
+      ratio = 0.5
+      type = HPaned
+    [[[terminal3]]]
+      order = 0
+      parent = child2
+      profile = four.1
+      type = Terminal
+      uuid = 3263e59f-9c2c-4fc4-9b63-92ceb183b85a
+    [[[terminal4]]]
+      order = 1
+      parent = child2
+      profile = four.2
+      type = Terminal
+      uuid = e9c01403-763e-4ed0-83c3-6bb70747d8b4
+    [[[terminal6]]]
+      order = 0
+      parent = child5
+      profile = four.3
+      type = Terminal
+      uuid = af0e8f34-73ac-4a66-b0c9-414aec5f2c4f
+    [[[terminal7]]]
+      order = 1
+      parent = child5
+      profile = four.4
+      type = Terminal
+      uuid = 5ec21ba0-ff5b-4166-8e9e-375378abf4c5
+[plugins]
+[profiles]
+  [[default]]
+    cursor_color = "#aaaaaa"
+    scrollback_lines = 5000
+  [[four.1]]
+    cursor_color = "#aaaaaa"
+    custom_command = SHELL_PROFILE=four.1 /bin/bash
+    use_custom_command = True
+  [[four.2]]
+    cursor_color = "#aaaaaa"
+    custom_command = SHELL_PROFILE=four.2 /bin/bash
+    use_custom_command = True
+  [[four.3]]
+    cursor_color = "#aaaaaa"
+    custom_command = SHELL_PROFILE=four.3 /bin/bash
+    use_custom_command = True
+  [[four.4]]
+    cursor_color = "#aaaaaa"
+    custom_command = SHELL_PROFILE=four.4 /bin/bash
+    use_custom_command = True
