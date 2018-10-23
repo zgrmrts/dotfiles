@@ -26,7 +26,10 @@ notes() {
   fi
 }
 
+# bash history
 if [[ -n $SHELL_PROFILE ]]; then
     HISTFILE=~/.bash_history."$SHELL_PROFILE"
+    # save immediately after every command when history files are separate
+    PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 fi
 
