@@ -99,7 +99,7 @@ let g:ctrlp_open_multiple_files = 'ijr'
 " file count limit
 let g:ctrlp_max_files = 50000
 " mixed mode: files, buffers, recently used files.
-let g:ctrlp_cmd = 'CtrlPMixed'
+" let g:ctrlp_cmd = 'CtrlPMixed'
 " ctrlp highlight color of selected file
 hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 
@@ -111,7 +111,13 @@ let g:vim_markdown_folding_disabled=1
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 " gitgutter
-set signcolumn=yes
+" set signcolumn=yes
 let g:gitgutter_realtime=1
 let g:gitgutter_eager=1
+let g:gitgutter_max_signs=1000
+
+" vim diff (ignore whitespaces)
+set diffopt+=iwhite
+
+
 

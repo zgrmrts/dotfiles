@@ -32,4 +32,5 @@ if [[ -n $SHELL_PROFILE ]]; then
     # save immediately after every command when history files are separate
     PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 fi
-
+HISTSIZE=100000
+HISTFILESIZE=100000

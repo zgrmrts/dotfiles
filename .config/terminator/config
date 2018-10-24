@@ -1,4 +1,5 @@
 [global_config]
+  inactive_color_offset = 1.0
 [keybindings]
 [layouts]
   [[default]]
@@ -8,17 +9,151 @@
     [[[window0]]]
       parent = ""
       type = Window
-  [[four]]
+  [[one]]
     [[[child0]]]
-      fullscreen = False
-      last_active_term = 3263e59f-9c2c-4fc4-9b63-92ceb183b85a
-      last_active_window = True
       maximised = True
       order = 0
       parent = ""
       position = 67:27
       size = 1981, 1225
-      title = /bin/bash
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 610
+      ratio = 0.5
+      type = VPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 988
+      ratio = 0.5
+      type = HPaned
+    [[[child5]]]
+      order = 1
+      parent = child1
+      position = 988
+      ratio = 0.5
+      type = HPaned
+    [[[terminal3]]]
+      order = 0
+      parent = child2
+      profile = one.1
+      type = Terminal
+    [[[terminal4]]]
+      order = 1
+      parent = child2
+      profile = one.2
+      type = Terminal
+    [[[terminal6]]]
+      order = 0
+      parent = child5
+      profile = one.3
+      type = Terminal
+    [[[terminal7]]]
+      order = 1
+      parent = child5
+      profile = one.4
+      type = Terminal
+  [[two]]
+    [[[child0]]]
+      maximised = True
+      order = 0
+      parent = ""
+      position = 67:27
+      size = 1981, 1225
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 610
+      ratio = 0.5
+      type = VPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 988
+      ratio = 0.5
+      type = HPaned
+    [[[child5]]]
+      order = 1
+      parent = child1
+      position = 988
+      ratio = 0.5
+      type = HPaned
+    [[[terminal3]]]
+      order = 0
+      parent = child2
+      profile = two.1
+      type = Terminal
+    [[[terminal4]]]
+      order = 1
+      parent = child2
+      profile = two.2
+      type = Terminal
+    [[[terminal6]]]
+      order = 0
+      parent = child5
+      profile = two.3
+      type = Terminal
+    [[[terminal7]]]
+      order = 1
+      parent = child5
+      profile = two.4
+      type = Terminal
+  [[three]]
+    [[[child0]]]
+      maximised = True
+      order = 0
+      parent = ""
+      position = 67:27
+      size = 1981, 1225
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 610
+      ratio = 0.5
+      type = VPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 988
+      ratio = 0.5
+      type = HPaned
+    [[[child5]]]
+      order = 1
+      parent = child1
+      position = 988
+      ratio = 0.5
+      type = HPaned
+    [[[terminal3]]]
+      order = 0
+      parent = child2
+      profile = three.1
+      type = Terminal
+    [[[terminal4]]]
+      order = 1
+      parent = child2
+      profile = three.2
+      type = Terminal
+    [[[terminal6]]]
+      order = 0
+      parent = child5
+      profile = three.3
+      type = Terminal
+    [[[terminal7]]]
+      order = 1
+      parent = child5
+      profile = three.4
+      type = Terminal
+  [[four]]
+    [[[child0]]]
+      maximised = True
+      order = 0
+      parent = ""
+      position = 67:27
+      size = 1981, 1225
       type = Window
     [[[child1]]]
       order = 0
@@ -43,43 +178,434 @@
       parent = child2
       profile = four.1
       type = Terminal
-      uuid = 3263e59f-9c2c-4fc4-9b63-92ceb183b85a
     [[[terminal4]]]
       order = 1
       parent = child2
       profile = four.2
       type = Terminal
-      uuid = e9c01403-763e-4ed0-83c3-6bb70747d8b4
     [[[terminal6]]]
       order = 0
       parent = child5
       profile = four.3
       type = Terminal
-      uuid = af0e8f34-73ac-4a66-b0c9-414aec5f2c4f
     [[[terminal7]]]
       order = 1
       parent = child5
       profile = four.4
       type = Terminal
-      uuid = 5ec21ba0-ff5b-4166-8e9e-375378abf4c5
+  [[five]]
+    [[[child0]]]
+      maximised = True
+      order = 0
+      parent = ""
+      position = 67:27
+      size = 1981, 1225
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 610
+      ratio = 0.5
+      type = VPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 988
+      ratio = 0.5
+      type = HPaned
+    [[[child5]]]
+      order = 1
+      parent = child1
+      position = 988
+      ratio = 0.5
+      type = HPaned
+    [[[terminal3]]]
+      order = 0
+      parent = child2
+      profile = five.1
+      type = Terminal
+    [[[terminal4]]]
+      order = 1
+      parent = child2
+      profile = five.2
+      type = Terminal
+    [[[terminal6]]]
+      order = 0
+      parent = child5
+      profile = five.3
+      type = Terminal
+    [[[terminal7]]]
+      order = 1
+      parent = child5
+      profile = five.4
+      type = Terminal
+  [[six]]
+    [[[child0]]]
+      maximised = True
+      order = 0
+      parent = ""
+      position = 67:27
+      size = 1981, 1225
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 610
+      ratio = 0.5
+      type = VPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 988
+      ratio = 0.5
+      type = HPaned
+    [[[child5]]]
+      order = 1
+      parent = child1
+      position = 988
+      ratio = 0.5
+      type = HPaned
+    [[[terminal3]]]
+      order = 0
+      parent = child2
+      profile = six.1
+      type = Terminal
+    [[[terminal4]]]
+      order = 1
+      parent = child2
+      profile = six.2
+      type = Terminal
+    [[[terminal6]]]
+      order = 0
+      parent = child5
+      profile = six.3
+      type = Terminal
+    [[[terminal7]]]
+      order = 1
+      parent = child5
+      profile = six.4
+      type = Terminal
+  [[seven]]
+    [[[child0]]]
+      maximised = True
+      order = 0
+      parent = ""
+      position = 67:27
+      size = 1981, 1225
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 610
+      ratio = 0.5
+      type = VPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 988
+      ratio = 0.5
+      type = HPaned
+    [[[child5]]]
+      order = 1
+      parent = child1
+      position = 988
+      ratio = 0.5
+      type = HPaned
+    [[[terminal3]]]
+      order = 0
+      parent = child2
+      profile = seven.1
+      type = Terminal
+    [[[terminal4]]]
+      order = 1
+      parent = child2
+      profile = seven.2
+      type = Terminal
+    [[[terminal6]]]
+      order = 0
+      parent = child5
+      profile = seven.3
+      type = Terminal
+    [[[terminal7]]]
+      order = 1
+      parent = child5
+      profile = seven.4
+      type = Terminal
+  [[eight]]
+    [[[child0]]]
+      maximised = True
+      order = 0
+      parent = ""
+      position = 67:27
+      size = 1981, 1225
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 610
+      ratio = 0.5
+      type = VPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 988
+      ratio = 0.5
+      type = HPaned
+    [[[child5]]]
+      order = 1
+      parent = child1
+      position = 988
+      ratio = 0.5
+      type = HPaned
+    [[[terminal3]]]
+      order = 0
+      parent = child2
+      profile = eight.1
+      type = Terminal
+    [[[terminal4]]]
+      order = 1
+      parent = child2
+      profile = eight.2
+      type = Terminal
+    [[[terminal6]]]
+      order = 0
+      parent = child5
+      profile = eight.3
+      type = Terminal
+    [[[terminal7]]]
+      order = 1
+      parent = child5
+      profile = eight.4
+      type = Terminal
+  [[nine]]
+    [[[child0]]]
+      maximised = True
+      order = 0
+      parent = ""
+      position = 67:27
+      size = 1981, 1225
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 610
+      ratio = 0.5
+      type = VPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 988
+      ratio = 0.5
+      type = HPaned
+    [[[child5]]]
+      order = 1
+      parent = child1
+      position = 988
+      ratio = 0.5
+      type = HPaned
+    [[[terminal3]]]
+      order = 0
+      parent = child2
+      profile = nine.1
+      type = Terminal
+    [[[terminal4]]]
+      order = 1
+      parent = child2
+      profile = nine.2
+      type = Terminal
+    [[[terminal6]]]
+      order = 0
+      parent = child5
+      profile = nine.3
+      type = Terminal
+    [[[terminal7]]]
+      order = 1
+      parent = child5
+      profile = nine.4
+      type = Terminal
 [plugins]
 [profiles]
   [[default]]
     cursor_color = "#aaaaaa"
     scrollback_lines = 5000
+  [[one.1]]
+    cursor_color = "#aaaaaa"
+    custom_command = SHELL_PROFILE=one.1 exec /bin/bash
+    scrollback_lines = 5000
+    use_custom_command = True
+  [[one.2]]
+    cursor_color = "#aaaaaa"
+    custom_command = SHELL_PROFILE=one.2 exec /bin/bash
+    scrollback_lines = 5000
+    use_custom_command = True
+  [[one.3]]
+    cursor_color = "#aaaaaa"
+    custom_command = SHELL_PROFILE=one.3 exec /bin/bash
+    scrollback_lines = 5000
+    use_custom_command = True
+  [[one.4]]
+    cursor_color = "#aaaaaa"
+    custom_command = SHELL_PROFILE=one.4 exec /bin/bash
+    scrollback_lines = 5000
+    use_custom_command = True
+  [[two.1]]
+    cursor_color = "#aaaaaa"
+    custom_command = SHELL_PROFILE=two.1 exec /bin/bash
+    scrollback_lines = 5000
+    use_custom_command = True
+  [[two.2]]
+    cursor_color = "#aaaaaa"
+    custom_command = SHELL_PROFILE=two.2 exec /bin/bash
+    scrollback_lines = 5000
+    use_custom_command = True
+  [[two.3]]
+    cursor_color = "#aaaaaa"
+    custom_command = SHELL_PROFILE=two.3 exec /bin/bash
+    scrollback_lines = 5000
+    use_custom_command = True
+  [[two.4]]
+    cursor_color = "#aaaaaa"
+    custom_command = SHELL_PROFILE=two.4 exec /bin/bash
+    scrollback_lines = 5000
+    use_custom_command = True
+  [[three.1]]
+    cursor_color = "#aaaaaa"
+    custom_command = SHELL_PROFILE=three.1 exec /bin/bash
+    scrollback_lines = 5000
+    use_custom_command = True
+  [[three.2]]
+    cursor_color = "#aaaaaa"
+    custom_command = SHELL_PROFILE=three.2 exec /bin/bash
+    scrollback_lines = 5000
+    use_custom_command = True
+  [[three.3]]
+    cursor_color = "#aaaaaa"
+    custom_command = SHELL_PROFILE=three.3 exec /bin/bash
+    scrollback_lines = 5000
+    use_custom_command = True
+  [[three.4]]
+    cursor_color = "#aaaaaa"
+    custom_command = SHELL_PROFILE=three.4 exec /bin/bash
+    scrollback_lines = 5000
+    use_custom_command = True
   [[four.1]]
     cursor_color = "#aaaaaa"
-    custom_command = SHELL_PROFILE=four.1 /bin/bash
+    custom_command = SHELL_PROFILE=four.1 exec /bin/bash
+    scrollback_lines = 5000
     use_custom_command = True
   [[four.2]]
     cursor_color = "#aaaaaa"
-    custom_command = SHELL_PROFILE=four.2 /bin/bash
+    custom_command = SHELL_PROFILE=four.2 exec /bin/bash
+    scrollback_lines = 5000
     use_custom_command = True
   [[four.3]]
     cursor_color = "#aaaaaa"
-    custom_command = SHELL_PROFILE=four.3 /bin/bash
+    custom_command = SHELL_PROFILE=four.3 exec /bin/bash
+    scrollback_lines = 5000
     use_custom_command = True
   [[four.4]]
     cursor_color = "#aaaaaa"
-    custom_command = SHELL_PROFILE=four.4 /bin/bash
+    custom_command = SHELL_PROFILE=four.4 exec /bin/bash
+    scrollback_lines = 5000
     use_custom_command = True
+  [[five.1]]
+    cursor_color = "#aaaaaa"
+    custom_command = SHELL_PROFILE=five.1 exec /bin/bash
+    scrollback_lines = 5000
+    use_custom_command = True
+  [[five.2]]
+    cursor_color = "#aaaaaa"
+    custom_command = SHELL_PROFILE=five.2 exec /bin/bash
+    scrollback_lines = 5000
+    use_custom_command = True
+  [[five.3]]
+    cursor_color = "#aaaaaa"
+    custom_command = SHELL_PROFILE=five.3 exec /bin/bash
+    scrollback_lines = 5000
+    use_custom_command = True
+  [[five.4]]
+    cursor_color = "#aaaaaa"
+    custom_command = SHELL_PROFILE=five.4 exec /bin/bash
+    scrollback_lines = 5000
+    use_custom_command = True
+   [[six.1]]
+    cursor_color = "#aaaaaa"
+    custom_command = SHELL_PROFILE=six.1 exec /bin/bash
+    scrollback_lines = 5000
+    use_custom_command = True
+  [[six.2]]
+    cursor_color = "#aaaaaa"
+    custom_command = SHELL_PROFILE=six.2 exec /bin/bash
+    scrollback_lines = 5000
+    use_custom_command = True
+  [[six.3]]
+    cursor_color = "#aaaaaa"
+    custom_command = SHELL_PROFILE=six.3 exec /bin/bash
+    scrollback_lines = 5000
+    use_custom_command = True
+  [[six.4]]
+    cursor_color = "#aaaaaa"
+    custom_command = SHELL_PROFILE=six.4 exec /bin/bash
+    scrollback_lines = 5000
+    use_custom_command = True
+   [[seven.1]]
+    cursor_color = "#aaaaaa"
+    custom_command = SHELL_PROFILE=seven.1 exec /bin/bash
+    scrollback_lines = 5000
+    use_custom_command = True
+  [[seven.2]]
+    cursor_color = "#aaaaaa"
+    custom_command = SHELL_PROFILE=seven.2 exec /bin/bash
+    scrollback_lines = 5000
+    use_custom_command = True
+  [[seven.3]]
+    cursor_color = "#aaaaaa"
+    custom_command = SHELL_PROFILE=seven.3 exec /bin/bash
+    scrollback_lines = 5000
+    use_custom_command = True
+  [[seven.4]]
+    cursor_color = "#aaaaaa"
+    custom_command = SHELL_PROFILE=seven.4 exec /bin/bash
+    scrollback_lines = 5000
+    use_custom_command = True
+   [[eight.1]]
+    cursor_color = "#aaaaaa"
+    custom_command = SHELL_PROFILE=eight.1 exec /bin/bash
+    scrollback_lines = 5000
+    use_custom_command = True
+  [[eight.2]]
+    cursor_color = "#aaaaaa"
+    custom_command = SHELL_PROFILE=eight.2 exec /bin/bash
+    scrollback_lines = 5000
+    use_custom_command = True
+  [[eight.3]]
+    cursor_color = "#aaaaaa"
+    custom_command = SHELL_PROFILE=eight.3 exec /bin/bash
+    scrollback_lines = 5000
+    use_custom_command = True
+  [[eight.4]]
+    cursor_color = "#aaaaaa"
+    custom_command = SHELL_PROFILE=eight.4 exec /bin/bash
+    scrollback_lines = 5000
+    use_custom_command = True
+   [[nine.1]]
+    cursor_color = "#aaaaaa"
+    custom_command = SHELL_PROFILE=nine.1 exec /bin/bash
+    scrollback_lines = 5000
+    use_custom_command = True
+  [[nine.2]]
+    cursor_color = "#aaaaaa"
+    custom_command = SHELL_PROFILE=nine.2 exec /bin/bash
+    scrollback_lines = 5000
+    use_custom_command = True
+  [[nine.3]]
+    cursor_color = "#aaaaaa"
+    custom_command = SHELL_PROFILE=nine.3 exec /bin/bash
+    scrollback_lines = 5000
+    use_custom_command = True
+  [[nine.4]]
+    cursor_color = "#aaaaaa"
+    custom_command = SHELL_PROFILE=nine.4 exec /bin/bash
+    scrollback_lines = 5000
+    use_custom_command = True
+ 
