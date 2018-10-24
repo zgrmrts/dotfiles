@@ -7,12 +7,11 @@ GIT_PS1_STATESEPARATOR=
 GIT_PS1_DESCRIBE_STYLE=branch
 GIT_PS1_SHOWCOLORHINTS=true
 source ${DOTFILES}/bin/git-prompt.sh
-PROMPT_COMMAND='__git_ps1 "\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]" " \$ " " (%s)"'
+PROMPT_COMMAND='__git_ps1 "\[\033[01;36m\]\u\[\033[00m\]\[\033[01;35m\]@\[\033[00m\]\[\033[01;32m\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]" "\$ " "\[\033[01;33m\][\[\033[00m\]%s\[\033[01;33m\]]\[\033[00m\]"'
 
 alias du='du -kh'    # Makes a more readable output.
 alias df='df -kTh'
-alias ls='ls -h --color'
-alias ll="ls -lv --group-directories-first"
+alias ll="ls -lv"
 
 notes() {
   if [ ! -z "$1" ]; then
