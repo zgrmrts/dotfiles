@@ -1,0 +1,37 @@
+# Java style uses attached brackets.
+#
+# int Foo(bool isBar) {
+#     if (isBar) {
+#         bar();
+#         return 1;
+#     } else
+#         return 0;
+# }
+--style=java
+
+
+# tab options
+--indent=spaces=4
+
+# bracket modify options
+--attach-namespaces
+--attach-classes
+--attach-inlines
+--attach-extern-c
+
+# indentation options
+--indent-preproc-define
+--indent-col1-comments
+
+# padding options
+--pad-header
+--delete-empty-lines
+--align-pointer=middle
+--align-reference=middle
+
+# formatting options
+--add-brackets
+--keep-one-line-statements
+--convert-tabs
+--max-code-length=80
+--break-after-logical

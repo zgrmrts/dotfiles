@@ -1,0 +1,4 @@
+# infinite timeout for sudo:
+#     add ",timestamp_timeout=-1" after env_reset in visudo
+sudo visudo
+

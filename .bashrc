@@ -34,3 +34,7 @@ if [[ -n $SHELL_PROFILE ]]; then
 fi
 HISTSIZE=100000
 HISTFILESIZE=100000
+
+# minicom
+export MINICOM="-l -L -w -c on -a on"
+

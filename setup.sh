@@ -4,6 +4,8 @@ export DOTFILES_RELATIVE="git/dotfiles"
 export DOTFILES=${HOME}/${DOTFILES_RELATIVE}
 
 # git configuration
+sudo apt install git &&
+sudo apt install gitk &&
 git config --global user.name "Ozgur Murat" &&
 git config --global user.email zgrmrts@gmail.com &&
 git config --global core.editor vi &&
@@ -30,6 +32,34 @@ mkdir -p ${HOME}/bin &&
 mkdir -p ${HOME}/recycle &&
 
 # terminator configuration file
+sudo apt install terminator &&
+mkdir -p ${HOME}/.config/terminator/ &&
 ln -s ${DOTFILES}/.config/terminator/config ${HOME}/.config/terminator/config &&
+
+# astylerc
+ln -s ${DOTFILES}/etc/astylerc ${HOME}/.astylerc &&
+
+# minicom setup & tty permissions
+sudo apt install minicom &&
+sudo usermod -a -G dialout ${USER} &&
+sudo cp ${DOTFILES}/setup/minicom/* /etc/minicom/. &&
+
+# install
+sudo apt install autoconf automake libtool &&
+sudo apt install make g++ gcc &&
+sudo apt install dialog &&
+sudo apt install meld &&
+sudo apt install mc &&
+sudo apt install sqlite &&
+sudo apt install synaptic &&
+sudo apt install gnome-tweaks &&
+sudo apt install devhelp &&
+sudo apt install cppreference-doc-en-html &&
+sudo apt install cowsay &&
+sudo apt install lolcat &&
+sudo apt install wmctrl &&
+sudo apt install okteta &&
+sudo apt install virtualbox &&
+sudo apt install htop &&
 
 echo installation complete
