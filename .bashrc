@@ -25,11 +25,18 @@ notes() {
   fi
 }
 
-# bash history
+# bash history & working directory
 if [[ -n $SHELL_PROFILE ]]; then
-    HISTFILE=~/.bash_history."$SHELL_PROFILE"
     # save immediately after every command when history files are separate
+    HISTFILE=~/.bash_history."$SHELL_PROFILE"
     PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
+    # save working directory after every shell command
+    PWDFILE=~/.pwd."$SHELL_PROFILE"
+    PROMPT_COMMAND="pwd>${PWDFILE};$PROMPT_COMMAND"
+    # restore wd, if any exists for this profile
+    if [[ -r ${PWDFILE} ]]; then
+        cd $(cat ${PWDFILE}) 2>/dev/null
+    fi
 fi
 HISTSIZE=100000
 HISTFILESIZE=100000
