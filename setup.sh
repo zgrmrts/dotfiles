@@ -61,5 +61,6 @@ sudo apt install wmctrl &&
 sudo apt install okteta &&
 sudo apt install virtualbox &&
 sudo apt install htop &&
+sudo apt install vim-gtk &&
 
 echo installation complete
