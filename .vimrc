@@ -51,7 +51,7 @@ set number              " Show line numbers
 set relativenumber      " Satir numaralari bulunulan satira gore relative
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 " mapping to toggle line numbers
-noremap <F3> :set invnumber<CR>:set invrelativenumber<CR>
+noremap <F3> :set invnumber<CR>:set invrelativenumber<CR>:GitGutterSignsToggle<CR>
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
