@@ -32,6 +32,8 @@ nnoremap <S-F8> :bprevious<CR>
 
 " Options
 set history=50          " keep 50 lines of command line history
+set undolevels=250      " more undo (default=100)
+set autoread            " reload files if changed externally
 set ruler               " show the cursor position all the time
 set showcmd             " display incomplete commands
 
