@@ -1,4 +1,20 @@
+# pre
+sudo apt install open-vm-tools
+sudo apt install git
+mkdir git
+cd git
+git clone https://github.com/zgrmrts/dotfiles.git
+cd dotfiles
+./setup.sh
+
 # infinite timeout for sudo:
 #     add ",timestamp_timeout=-1" after env_reset in visudo
 sudo visudo
+
+# github
+ssh-keygen
+cat ${HOME}/.ssh/id_rsa.pub
+add it to https://github.com/settings/keys
+cd git/dotfiles
+git remote set-url origin git@github.com:zgrmrts/dotfiles.git
 
