@@ -14,8 +14,8 @@ git config --global core.editor vi &&
 mkdir -p ~/.vim/backup &&
 mkdir -p ~/.vim/swap &&
 mkdir -p ~/.vim/undo &&
-# git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim &&
-# ln -s ${DOTFILES}/.vimrc ${HOME}/.vimrc &&
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim &&
+ln -s ${DOTFILES}/.vimrc ${HOME}/.vimrc &&
 sudo apt install vim &&
 sudo apt install vim-gtk &&
 vim +PluginInstall +qall &&
