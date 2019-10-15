@@ -1,11 +1,12 @@
+set -x
 # dotfiles relative to home
 export DOTFILES_RELATIVE="git/dotfiles"
 # full path
 export DOTFILES=${HOME}/${DOTFILES_RELATIVE}
 
 # git configuration
-sudo apt install git &&
-sudo apt install gitk &&
+sudo apt -y install git &&
+sudo apt -y install gitk &&
 git config --global user.name "Ozgur Murat" &&
 git config --global user.email zgrmrts@gmail.com &&
 git config --global core.editor vi &&
@@ -16,8 +17,8 @@ mkdir -p ~/.vim/swap &&
 mkdir -p ~/.vim/undo &&
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim &&
 ln -s ${DOTFILES}/.vimrc ${HOME}/.vimrc &&
-sudo apt install vim &&
-sudo apt install vim-gtk &&
+sudo apt -y install vim &&
+sudo apt -y install vim-gtk &&
 vim +PluginInstall +qall &&
 
 # startup scripts
@@ -34,7 +35,7 @@ mkdir -p ${HOME}/bin &&
 mkdir -p ${HOME}/recycle &&
 
 # terminator configuration file
-sudo apt install terminator &&
+sudo apt -y install terminator &&
 mkdir -p ${HOME}/.config/terminator/ &&
 ln -s ${DOTFILES}/.config/terminator/config ${HOME}/.config/terminator/config &&
 
@@ -42,26 +43,26 @@ ln -s ${DOTFILES}/.config/terminator/config ${HOME}/.config/terminator/config &&
 ln -s ${DOTFILES}/etc/astylerc ${HOME}/.astylerc &&
 
 # minicom setup & tty permissions
-sudo apt install minicom &&
+sudo apt -y install minicom &&
 sudo usermod -a -G dialout ${USER} &&
 sudo cp ${DOTFILES}/setup/minicom/* /etc/minicom/. &&
 
 # install
-sudo apt install autoconf automake libtool &&
-sudo apt install make g++ gcc &&
-sudo apt install dialog &&
-sudo apt install meld &&
-sudo apt install mc &&
-sudo apt install sqlite &&
-sudo apt install synaptic &&
-sudo apt install gnome-tweaks &&
-sudo apt install devhelp &&
-sudo apt install cppreference-doc-en-html &&
-sudo apt install cowsay &&
-sudo apt install lolcat &&
-sudo apt install wmctrl &&
-sudo apt install okteta &&
-sudo apt install virtualbox &&
-sudo apt install htop &&
+sudo apt -y install autoconf automake libtool &&
+sudo apt -y install make g++ gcc &&
+sudo apt -y install dialog &&
+sudo apt -y install meld &&
+sudo apt -y install mc &&
+sudo apt -y install sqlite &&
+sudo apt -y install synaptic &&
+sudo apt -y install gnome-tweaks &&
+sudo apt -y install devhelp &&
+sudo apt -y install cppreference-doc-en-html &&
+sudo apt -y install cowsay &&
+sudo apt -y install lolcat &&
+sudo apt -y install wmctrl &&
+sudo apt -y install okteta &&
+sudo apt -y install virtualbox &&
+sudo apt -y install htop &&
 
 echo installation complete
