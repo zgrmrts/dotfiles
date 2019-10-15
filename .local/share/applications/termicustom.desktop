@@ -1,0 +1,16 @@
+[Desktop Entry]
+Name=TermiCustom
+Comment=Four terminals in one window
+TryExec=terminator
+Exec=terminator -l custom
+Icon=terminator
+Type=Application
+Categories=GNOME;GTK;Utility;TerminalEmulator;System;
+StartupNotify=true
+X-Ubuntu-Gettext-Domain=terminator
+X-Ayatana-Desktop-Shortcuts=NewTermiCustomWindow;
+Keywords=terminal;shell;prompt;command;commandline;
+[NewTermiCustomWindow Shortcut Group]
+Name=Open a New Window With 4 Terms
+Exec=terminator -l custom
+TargetEnvironment=Unity

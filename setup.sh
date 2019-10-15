@@ -38,7 +38,7 @@ mkdir -p ${HOME}/recycle &&
 sudo apt -y install terminator &&
 mkdir -p ${HOME}/.config/terminator/ &&
 ln -s ${DOTFILES}/.config/terminator/config ${HOME}/.config/terminator/config &&
-
+ln -s ${DOTFILES}/.local/share/applications/termicustom.desktop ${HOME}/.local/share/applications/termicustom.desktop &&
 # astylerc
 ln -s ${DOTFILES}/etc/astylerc ${HOME}/.astylerc &&
 
