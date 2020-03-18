@@ -24,6 +24,7 @@ endif
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let NERDTreeIgnore = ['\.o$', '\.lo$']
 
 " tab switching
 set switchbuf=usetab
@@ -111,6 +112,8 @@ let g:ctrlp_max_files = 50000
 hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 " ctrlp window size
 let g:ctrlp_match_window = 'min:4,max:20'
+" ignore
+let g:ctrlp_custom_ignore = '.o$|.lo$'
 
 " disable folding
 set nofoldenable
