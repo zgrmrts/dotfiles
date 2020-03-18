@@ -48,6 +48,11 @@ nnoremap <silent> <F4> :noh<CR>
 " map <F7> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
 map <F6> :execute " grep -srnw --binary-files=without-match --exclude-dir=.git . -e " . expand("<cword>") . " " <bar> cwindow<CR>
 
+" Copy/paste to/from global clipboard
+nnoremap <silent> <F7> "*yy
+vnoremap <silent> <F7> "*y
+nnoremap <silent> <S-F7> "*P
+
 " Line numbering
 set number              " Show line numbers
 set relativenumber      " Satir numaralari bulunulan satira gore relative
