@@ -44,3 +44,6 @@ HISTFILESIZE=100000
 # minicom
 export MINICOM="-l -L -w -c on -a on"
 
+# completion
+source ${DOTFILES}/etc/terminator-completion.bash
+
