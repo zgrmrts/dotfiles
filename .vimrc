@@ -109,6 +109,8 @@ let g:ctrlp_max_files = 50000
 " let g:ctrlp_cmd = 'CtrlPMixed'
 " ctrlp highlight color of selected file
 hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+" ctrlp window size
+let g:ctrlp_match_window = 'min:4,max:20'
 
 " disable folding
 set nofoldenable
