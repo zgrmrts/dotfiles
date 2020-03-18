@@ -86,6 +86,7 @@ set hidden
 " show indicators for tab and trailing spaces
 set listchars=tab:>-,trail:~
 set list
+nnoremap <F9> :set invlist<CR>
 
 " F2 toggle paste from other application on and off (show in status line)
 nnoremap <F2> :set invpaste paste?<CR>
