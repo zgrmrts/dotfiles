@@ -79,6 +79,7 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 set smarttab
+set cino=N-s
 
 " Enable switching from modified buffer
 set hidden
