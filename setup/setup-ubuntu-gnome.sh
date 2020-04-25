@@ -56,6 +56,9 @@ dconf write /org/gnome/desktop/wm/preferences/button-layout "'close,minimize,max
 # alt-tab only switches within workspace apps
 dconf write /org/gnome/shell/app-switcher/current-workspace-only true                                                        || { echo ${ERRSTR} ${LINENO}; exit 1;}
 
+# isolate workspaces
+dconf write /org/gnome/shell/extensions/dash-to-dock/isolate-workspaces true                                                 || { echo ${ERRSTR} ${LINENO}; exit 1;}
+
 # disable screen lock
 dconf write /org/gnome/desktop/screensaver/lock-enabled false
 
