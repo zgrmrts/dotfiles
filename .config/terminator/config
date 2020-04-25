@@ -1,30 +1,6 @@
 [global_config]
   inactive_color_offset = 1.0
 [keybindings]
-[profiles]
-  [[default]]
-    cursor_color = "#aaaaaa"
-    scrollback_lines = 5000
-  [[custom.1]]
-    cursor_color = "#aaaaaa"
-    scrollback_lines = 5000
-    use_custom_command = True
-    custom_command = '''SHELL_PROFILE=desktop$(wmctrl -d | awk '{if($2=="*") print $1;}').window1 exec /bin/bash'''
-  [[custom.2]]
-    cursor_color = "#aaaaaa"
-    scrollback_lines = 5000
-    use_custom_command = True
-    custom_command = '''SHELL_PROFILE=desktop$(wmctrl -d | awk '{if($2=="*") print $1;}').window2 exec /bin/bash'''
-  [[custom.3]]
-    cursor_color = "#aaaaaa"
-    scrollback_lines = 5000
-    use_custom_command = True
-    custom_command = '''SHELL_PROFILE=desktop$(wmctrl -d | awk '{if($2=="*") print $1;}').window3 exec /bin/bash'''
-  [[custom.4]]
-    cursor_color = "#aaaaaa"
-    scrollback_lines = 5000
-    use_custom_command = True
-    custom_command = '''SHELL_PROFILE=desktop$(wmctrl -d | awk '{if($2=="*") print $1;}').window4 exec /bin/bash'''
 [layouts]
   [[default]]
     [[[child1]]]
@@ -80,3 +56,27 @@
       profile = custom.4
       type = Terminal
 [plugins]
+[profiles]
+  [[default]]
+    cursor_color = "#aaaaaa"
+    scrollback_lines = 5000
+  [[custom.1]]
+    cursor_color = "#aaaaaa"
+    custom_command = '''SHELL_PROFILE=desktop$(wmctrl -d | awk '{if($2=="*") print $1;}').window1 exec /bin/bash'''
+    scrollback_lines = 5000
+    use_custom_command = True
+  [[custom.2]]
+    cursor_color = "#aaaaaa"
+    custom_command = '''SHELL_PROFILE=desktop$(wmctrl -d | awk '{if($2=="*") print $1;}').window2 exec /bin/bash'''
+    scrollback_lines = 5000
+    use_custom_command = True
+  [[custom.3]]
+    cursor_color = "#aaaaaa"
+    custom_command = '''SHELL_PROFILE=desktop$(wmctrl -d | awk '{if($2=="*") print $1;}').window3 exec /bin/bash'''
+    scrollback_lines = 5000
+    use_custom_command = True
+  [[custom.4]]
+    cursor_color = "#aaaaaa"
+    custom_command = '''SHELL_PROFILE=desktop$(wmctrl -d | awk '{if($2=="*") print $1;}').window4 exec /bin/bash'''
+    scrollback_lines = 5000
+    use_custom_command = True
