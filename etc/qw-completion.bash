@@ -6,7 +6,7 @@ _qw_competions()
     if (( numargs != 2 )) ; then
         return;
     fi
-    local suggestions=($(compgen -W "$(for i in $(ls ~/.qw-env/pwd.ozelprofil.*); do j=${i#*ozelprofil.}; echo ${j%.window*}; done | sort | uniq)" -- ${COMP_WORDS[numargs-1]}))
+    local suggestions=($(compgen -W "$(for i in $(echo ~/.qw-env/pwd.ozelprofil.*); do j=${i#*ozelprofil.}; echo ${j%.window*}; done | sort | uniq)" -- ${COMP_WORDS[numargs-1]}))
     COMPREPLY=("${suggestions[@]}")
 }
 
