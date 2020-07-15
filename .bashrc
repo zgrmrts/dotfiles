@@ -26,7 +26,18 @@ notes() {
 }
 
 # bash history & working directory
-if [[ -n $SHELL_PROFILE ]]; then
+if [[ -n $SPECIAL_PROFILE ]]; then
+    # save immediately after every command when history files are separate
+    HISTFILE=~/.qw-env/bash_history."$SPECIAL_PROFILE"
+    PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
+    # save working directory after every shell command
+    PWDFILE=~/.qw-env/pwd."$SPECIAL_PROFILE"
+    PROMPT_COMMAND="pwd>${PWDFILE};$PROMPT_COMMAND"
+    # restore wd, if any exists for this profile
+    if [[ -r ${PWDFILE} ]]; then
+        cd $(cat ${PWDFILE}) 2>/dev/null
+    fi
+elif [[ -n $SHELL_PROFILE ]]; then
     # save immediately after every command when history files are separate
     HISTFILE=~/.bash_history."$SHELL_PROFILE"
     PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
@@ -46,4 +57,5 @@ export MINICOM="-l -L -w -c on -a on"
 
 # completion
 source ${DOTFILES}/etc/terminator-completion.bash
+source ${DOTFILES}/etc/qw-completion.bash
 

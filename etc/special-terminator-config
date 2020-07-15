@@ -1,0 +1,91 @@
+[global_config]
+    broadcast_special = off
+    enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+    inactive_color_offset = 1.0
+    suppress_multiple_term_dialog = True
+[layouts]
+    [[special]]
+        [[[c0]]]
+            order = 0
+            parent = ""
+            type = Window
+        [[[c1]]]
+            order = 0
+            parent = c0
+            type = HPaned
+        [[[l0]]]
+            order=0
+            parent=c1
+            type=VPaned
+            ratio=0.5
+        [[[l1]]]
+            order=0
+            parent=l0
+            type=Terminal
+            profile=profile.l.0
+            title=REPLACE1
+        [[[l2]]]
+            order=1
+            parent=l0
+            type=Terminal
+            profile=profile.l.1
+            title=REPLACE1
+        [[[r0]]]
+            order=1
+            parent=c1
+            type=VPaned
+            ratio=0.5
+        [[[r1]]]
+            order=0
+            parent=r0
+            type=Terminal
+            profile=profile.r.0
+            title=REPLACE1
+        [[[r2]]]
+            order=1
+            parent=r0
+            type=Terminal
+            profile=profile.r.1
+            title=REPLACE1
+[profiles]
+    [[profile.l.0]]
+        cursor_color = "#aaaaaa"
+        custom_command = SPECIAL_PROFILE=ozelprofil.REPLACE2.window1 exec /bin/bash
+        scrollback_lines = 5000
+        use_custom_command = True
+        exit_action = restart
+        use_system_font = False
+        font = Ubuntu Mono 11
+        foreground_color = "#ffffff"
+        palette = "#888a85:#ef2929:#4e9a06:#fce94f:#729fcf:#ad7fa8:#06989a:#eeeeec:#888a85:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
+    [[profile.l.1]]
+        cursor_color = "#aaaaaa"
+        custom_command = SPECIAL_PROFILE=ozelprofil.REPLACE2.window2 exec /bin/bash
+        scrollback_lines = 5000
+        use_custom_command = True
+        exit_action = restart
+        use_system_font = False
+        font = Ubuntu Mono 11
+        foreground_color = "#ffffff"
+        palette = "#888a85:#ef2929:#4e9a06:#fce94f:#729fcf:#ad7fa8:#06989a:#eeeeec:#888a85:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
+    [[profile.r.0]]
+        cursor_color = "#aaaaaa"
+        custom_command = SPECIAL_PROFILE=ozelprofil.REPLACE2.window3 exec /bin/bash
+        scrollback_lines = 5000
+        use_custom_command = True
+        exit_action = restart
+        use_system_font = False
+        font = Ubuntu Mono 11
+        foreground_color = "#ffffff"
+        palette = "#888a85:#ef2929:#4e9a06:#fce94f:#729fcf:#ad7fa8:#06989a:#eeeeec:#888a85:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
+    [[profile.r.1]]
+        cursor_color = "#aaaaaa"
+        custom_command = SPECIAL_PROFILE=ozelprofil.REPLACE2.window4 exec /bin/bash
+        scrollback_lines = 5000
+        use_custom_command = True
+        exit_action = restart
+        use_system_font = False
+        font = Ubuntu Mono 11
+        foreground_color = "#ffffff"
+        palette = "#888a85:#ef2929:#4e9a06:#fce94f:#729fcf:#ad7fa8:#06989a:#eeeeec:#888a85:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
+

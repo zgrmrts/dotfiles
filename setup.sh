@@ -42,6 +42,9 @@ ln -s ${DOTFILES}/.local/share/applications/termicustom.desktop ${HOME}/.local/s
 # astylerc
 ln -s ${DOTFILES}/etc/astylerc ${HOME}/.astylerc &&
 
+# special history & pwd
+mkdir ~/.qw-env &&
+
 # minicom setup & tty permissions
 sudo apt -y install minicom &&
 sudo usermod -a -G dialout ${USER} &&
