@@ -67,5 +67,7 @@ sudo apt -y install wmctrl &&
 sudo apt -y install okteta &&
 sudo apt -y install virtualbox &&
 sudo apt -y install htop &&
+sudo apt -y install golang-go &&
+sudo apt -y install curl &&
 
 echo installation complete
