@@ -1,0 +1,6 @@
+#! /bin/bash
+
+for i in $(wmctrl -lp | grep 'qw ' | awk '{print $NF}'); do
+    wmctrl -lp | grep "qw ${i}" | awk '{print $2," ",$NF}'
+done > ${HOME}/.qw.saved
+

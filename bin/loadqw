@@ -1,0 +1,11 @@
+#! /bin/bash
+
+for i in $(seq $(wc -l ${HOME}/.qw.saved | awk '{print $1}')); do 
+    window=$(cat ${HOME}/.qw.saved | head -$i | tail -1 | awk '{print $1}')
+    param=$(cat ${HOME}/.qw.saved | head -$i | tail -1 | awk '{print $2}')
+    [[ -n "${window}" ]] || exit 0
+    [[ -n "${param}" ]] || exit 0
+    wmctrl -s ${window}
+    qw ${param}
+    sleep 2
+done

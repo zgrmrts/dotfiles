@@ -13,4 +13,4 @@ cp ${DOTFILES}/etc/special-terminator-config ${TEMPFILE}
 sed -i "s/REPLACE1/${CONF}/g" "${TEMPFILE}"
 sed -i "s/REPLACE2/${CONF}/g" "${TEMPFILE}"
 
-terminator --no-dbus --config=${TEMPFILE} --layout=special --profile=special --maximise &
+terminator --no-dbus --config=${TEMPFILE} --layout=special --profile=special --maximise --title="qw ${CONF}" &
