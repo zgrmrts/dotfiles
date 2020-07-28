@@ -8,9 +8,13 @@ if [[ -z ${CONF} ]] ; then
     exit 1
 fi
 
-TEMPFILE=$(tempfile -p term. -s .conf)
-cp ${DOTFILES}/etc/special-terminator-config ${TEMPFILE}
-sed -i "s/REPLACE1/${CONF}/g" "${TEMPFILE}"
-sed -i "s/REPLACE2/${CONF}/g" "${TEMPFILE}"
+if (wmctrl -lp | grep -q "qw ${CONF}") ; then
+    wmctrl -a "qw ${CONF}"
+else
+    TEMPFILE=$(tempfile -p term. -s .conf)
+    cp ${DOTFILES}/etc/special-terminator-config ${TEMPFILE}
+    sed -i "s/REPLACE1/${CONF}/g" "${TEMPFILE}"
+    sed -i "s/REPLACE2/${CONF}/g" "${TEMPFILE}"
 
-terminator --no-dbus --config=${TEMPFILE} --layout=special --profile=special --maximise --title="qw ${CONF}" &
+    terminator --no-dbus --config=${TEMPFILE} --layout=special --profile=special --maximise --title="qw ${CONF}" &
+fi
