@@ -5,12 +5,10 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'ervandew/supertab'
-" Plugin 'Valloric/YouCompleteMe'
+Plugin 'rust-lang/rust.vim'
 call vundle#end()
 filetype plugin indent on     " required by vundle
 
@@ -133,5 +131,7 @@ let g:gitgutter_max_signs=1000
 " vim diff (ignore whitespaces)
 set diffopt+=iwhite
 
+" required by rust plugin
+syntax enable
 
 
