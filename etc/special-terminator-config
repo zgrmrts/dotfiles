@@ -56,8 +56,6 @@
         exit_action = restart
         use_system_font = False
         font = Ubuntu Mono 11
-        foreground_color = "#ffffff"
-        palette = "#888a85:#ef2929:#4e9a06:#fce94f:#729fcf:#ad7fa8:#06989a:#eeeeec:#888a85:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
     [[profile.l.1]]
         cursor_color = "#aaaaaa"
         custom_command = SPECIAL_PROFILE=ozelprofil.REPLACE2.window2 exec /bin/bash
@@ -66,8 +64,6 @@
         exit_action = restart
         use_system_font = False
         font = Ubuntu Mono 11
-        foreground_color = "#ffffff"
-        palette = "#888a85:#ef2929:#4e9a06:#fce94f:#729fcf:#ad7fa8:#06989a:#eeeeec:#888a85:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
     [[profile.r.0]]
         cursor_color = "#aaaaaa"
         custom_command = SPECIAL_PROFILE=ozelprofil.REPLACE2.window3 exec /bin/bash
@@ -76,8 +72,6 @@
         exit_action = restart
         use_system_font = False
         font = Ubuntu Mono 11
-        foreground_color = "#ffffff"
-        palette = "#888a85:#ef2929:#4e9a06:#fce94f:#729fcf:#ad7fa8:#06989a:#eeeeec:#888a85:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
     [[profile.r.1]]
         cursor_color = "#aaaaaa"
         custom_command = SPECIAL_PROFILE=ozelprofil.REPLACE2.window4 exec /bin/bash
@@ -86,6 +80,4 @@
         exit_action = restart
         use_system_font = False
         font = Ubuntu Mono 11
-        foreground_color = "#ffffff"
-        palette = "#888a85:#ef2929:#4e9a06:#fce94f:#729fcf:#ad7fa8:#06989a:#eeeeec:#888a85:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
 
