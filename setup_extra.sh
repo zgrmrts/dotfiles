@@ -7,6 +7,10 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash 
 # Install deno
 curl -fsSL https://deno.land/x/install/install.sh | sh &&
 
+# Install docker
+sudo apt install -y docker.io &&
+sudo usermod -aG docker $USER &&
+
 # install
 sudo apt -y install gitk &&
 sudo apt -y install mc &&
