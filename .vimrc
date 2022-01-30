@@ -133,5 +133,6 @@ set diffopt+=iwhite
 
 " required by rust plugin
 syntax enable
+let g:rustfmt_autosave = 1
 
 
