@@ -1,8 +1,6 @@
 set -x
-# dotfiles relative to home
-export DOTFILES_RELATIVE="git/dotfiles"
-# full path
-export DOTFILES=${HOME}/${DOTFILES_RELATIVE}
+# path of this script
+export DOTFILES=$(readlink -f "$(dirname $0)")
 
 # git configuration
 sudo apt -y install git &&
@@ -21,11 +19,11 @@ vim +PluginInstall +qall &&
 
 # startup scripts
 echo "# my special configuration" >> ~/.bashrc &&
-echo "export DOTFILES=\${HOME}/${DOTFILES_RELATIVE}" >> ~/.bashrc &&
+echo "export DOTFILES=${DOTFILES}" >> ~/.bashrc &&
 echo "source \${DOTFILES}/.bashrc" >> ~/.bashrc &&
 
 echo "# my special configuration" >> ~/.profile &&
-echo "export DOTFILES=\${HOME}/${DOTFILES_RELATIVE}" >> ~/.profile &&
+echo "export DOTFILES=${DOTFILES}" >> ~/.profile &&
 echo "source \${DOTFILES}/.profile" >> ~/.profile &&
 
 # my directory structure
