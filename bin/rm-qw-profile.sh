@@ -8,4 +8,5 @@ PROFILE="${1}"
 set -x
 rm -f ~/.qw-env/pwd.ozelprofil.${PROFILE}.window*
 rm -f ~/.qw-env/bash_history.ozelprofil.${PROFILE}.window*
+rm -rf ~/.qw-tmp/${PROFILE}
 

@@ -36,6 +36,12 @@ if [[ -n $SPECIAL_PROFILE ]]; then
     # restore wd, if any exists for this profile
     if [[ -r ${PWDFILE} ]]; then
         cd $(cat ${PWDFILE}) 2>/dev/null
+    else
+        TMPDIRNAME=${SPECIAL_PROFILE%.*}
+        TMPWD="${HOME}/.qw-tmp/${TMPDIRNAME#*.}"
+        mkdir -p "${TMPWD}" 2>/dev/null
+        cd "${TMPWD}" 2>/dev/null
+        echo "${TMPWD}" > "${PWDFILE}" 2>/dev/null
     fi
 elif [[ -n $SHELL_PROFILE ]]; then
     # save immediately after every command when history files are separate
