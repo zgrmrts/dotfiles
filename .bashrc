@@ -63,5 +63,4 @@ export MINICOM="-l -L -w -c on -a on"
 
 # completion
 source ${DOTFILES}/etc/terminator-completion.bash
-source ${DOTFILES}/etc/qw-completion.bash
 
